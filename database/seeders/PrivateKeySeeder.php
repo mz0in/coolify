@@ -66,7 +66,7 @@ a1C8EDKapCw5hAhizEFOUQKOygL8Ipn+tmEUkORYdZ8Q8cWFCv9nIw==
             "team_id" => 0,
             "name" => "development-gitlab-app",
             "description" => "This is the key for using the development Gitlab app",
-            "private_key" => "asdf"
+            "private_key" => "VALID_PRIVATE_KEY_DATA"
         ]);
     }
 }
