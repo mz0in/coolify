@@ -9,6 +9,6 @@ class Webhook extends Model
     protected $guarded = [];
     protected $casts = [
         'type' => 'string',
-        'payload' => 'encrypted',
+        'payload' => 'json',
     ];
 }
