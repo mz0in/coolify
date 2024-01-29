@@ -14,18 +14,16 @@ class PrivateKeySeeder extends Seeder
     {
         PrivateKey::create([
             "id" => 0,
-            "team_id" => 0,
-            "name" => "Testing-host",
-            "description" => "This is a test docker container",
+            "team_id" => 1,
+            "name" => "Production-host",
+            "description" => "This is a production docker container",
             "private_key" => "-----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 QyNTUxOQAAACBbhpqHhqv6aI67Mj9abM3DVbmcfYhZAhC7ca4d9UCevAAAAJi/QySHv0Mk
 hwAAAAtzc2gtZWQyNTUxOQAAACBbhpqHhqv6aI67Mj9abM3DVbmcfYhZAhC7ca4d9UCevA
 AAAECBQw4jg1WRT2IGHMncCiZhURCts2s24HoDS0thHnnRKVuGmoeGq/pojrsyP1pszcNV
 uZx9iFkCELtxrh31QJ68AAAAEXNhaWxANzZmZjY2ZDJlMmRkAQIDBA==
------END OPENSSH PRIVATE KEY-----
-"
-
+-----END OPENSSH PRIVATE KEY-----"
         ]);
         PrivateKey::create([
             "id" => 1,
