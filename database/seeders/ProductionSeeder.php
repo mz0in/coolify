@@ -22,7 +22,7 @@ class ProductionSeeder extends Seeder
 {
     public function run(): void
     {
-        if (isCloud()) {
+        if (true) {
             echo "Running in cloud mode.\n";
         } else {
             echo "Running in self-hosted mode.\n";
@@ -69,7 +69,7 @@ class ProductionSeeder extends Seeder
         if (!isCloud() && config('coolify.is_windows_docker_desktop') == false) {
             echo "Checking localhost key.\n";
             // Save SSH Keys for the Coolify Host
-            $coolify_key_name = "id.root@host.docker.internal";
+            $coolify_key_name = "id.root@coolify.com";
             $coolify_key = Storage::disk('ssh-keys')->get("{$coolify_key_name}");
 
             if ($coolify_key) {
@@ -130,8 +130,8 @@ class ProductionSeeder extends Seeder
                     'team_id' => 0,
                 ],
                 [
-                    "name" => "Testing-host",
-                    "description" => "This is a a docker container with SSH access",
+                    "name" => "Production-host",
+                    "description" => "This is a production docker container",
                     "private_key" => "-----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
 QyNTUxOQAAACBbhpqHhqv6aI67Mj9abM3DVbmcfYhZAhC7ca4d9UCevAAAAJi/QySHv0Mk
@@ -145,7 +145,7 @@ uZx9iFkCELtxrh31QJ68AAAAEXNhaWxANzZmZjY2ZDJlMmRkAQIDBA==
             if (Server::find(0) == null) {
                 $server_details = [
                     'id' => 0,
-                    'uuid' => 'coolify-testing-host',
+                    'uuid' => 'coolify-production-host',
                     'name' => "localhost",
                     'description' => "This is the server where Coolify is running on. Don't delete this!",
                     'user' => 'root',
