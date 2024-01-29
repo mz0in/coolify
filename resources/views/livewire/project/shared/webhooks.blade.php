@@ -1,6 +1,6 @@
 <div class="flex flex-col gap-2">
     <div class="flex items-center gap-2">
-        <h2>Webhooks</h2>
+        <h2>Deploy Webhooks</h2>
         <x-helper
             helper="For more details goto our <a class='text-white underline' href='https://coolify.io/docs/api/deploy-webhook' target='_blank'>docs</a>." />
     </div>
@@ -19,7 +19,7 @@
                             readonly label="GitHub" id="githubManualWebhook"></x-forms.input>
                         <x-forms.input type="password"
                             helper="Need to set a secret to be able to use this webhook. It should match with the secret in GitHub."
-                            label="GitHub Webhook Secret" id="resource.manual_webhook_secret_github"></x-forms.input>
+                            label="GitHub Webhook Secret" id="github_webhook_secret"></x-forms.input>
 
                     </div>
                     <a target="_blank" class="flex hover:no-underline" href="{{ $resource?->gitWebhook }}">
@@ -31,7 +31,7 @@
                         <x-forms.input readonly label="GitLab" id="gitlabManualWebhook"></x-forms.input>
                         <x-forms.input type="password"
                             helper="Need to set a secret to be able to use this webhook. It should match with the secret in GitLab."
-                            label="GitLab Webhook Secret" id="resource.manual_webhook_secret_gitlab"></x-forms.input>
+                            label="GitLab Webhook Secret" id="gitlab_webhook_secret"></x-forms.input>
                     </div>
                     <x-forms.button type="submit">Save</x-forms.button>
                 </form>
